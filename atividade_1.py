@@ -1,21 +1,19 @@
 import os 
 
-os.system("cls")
-#ENTRADA DE DADOS
+#limpar o terminal.
+os.system("cls || clear")
 
-matricula = input("Digite a sua matricula: ")
+# Dados já cadastrados
+login_cadastrado = "admin"
+senha_cadastrada = "1234"
 
-ano_nacimento = int(input("Digite seu ano de nascimento: "))
+# Solicita dados ao usuário
+login_digitado = input("Digite o login: ")
+senha_digitada = input("Digite a senha: ")
 
-tempo_de_trabalho = int(input("Digite o tempo de tempo de trabalho em anos"))
-
-#PROCESSAMENTO
-idade = 2026 - ano_nacimento
-
-if idade >= 65:
-    resultado = "requerer aposentadoria"
+# Verificação
+if login_digitado == login_cadastrado and senha_digitada == senha_cadastrada:
+    print("Bem vindo")
 
 else:
-    idade >= 30:
-    resultado = "nao requer aposentadoria"
-
+    print("Login ou senha invalidos")
