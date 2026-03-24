@@ -1,19 +1,25 @@
 import os 
 
-#limpar o terminal.
-os.system("cls || clear")
+#limpa o terminal.
+os.system("cls")
 
-# Dados já cadastrados
-login_cadastrado = "admin"
-senha_cadastrada = "1234"
+print("solicitando dados. ")
+nome = input("digite seu nome: ")
 
-# Solicita dados ao usuário
-login_digitado = input("Digite o login: ")
-senha_digitada = input("Digite a senha: ")
 
-# Verificação
-if login_digitado == login_cadastrado and senha_digitada == senha_cadastrada:
-    print("Bem vindo")
+primeiro_nota = float(input("digite a primeira nota: "))
+segundo_nota = float(input("digite a segunda nota: "))
+terceira_nota = float(input("digite a terceira nota: "))
+perguntar = input("Deseja adicionar mais uma nota 'Sim' para adicionar ou 'Nao' para nao adicionar: ")
+quarta_nota = float(input("Digite a quarta nota: "))
 
+
+media = (primeiro_nota + segundo_nota + terceira_nota + quarta_nota) / 4
+print(f"A media de {nome} é {media:.2f}")
+perguntar = input("Deseja adicionar mais uma nota 'Sim' para adicionar ou 'Nao' para nao adicionar: ").upper()
+
+
+if media>= 7:
+    print("aluno aprovado.")
 else:
-    print("Login ou senha invalidos")
+    print("aluno reprovado.")
