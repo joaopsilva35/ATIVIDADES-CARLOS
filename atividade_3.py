@@ -1,24 +1,30 @@
-# Exemplo de estrutura condicional aninhada
-#match-case substitui o uso do if-elif-else
+import os 
 
-dia = input("Digite o dia da semana")
+os.system("cls") #Limpa o terminal. 
 
-match dia:
-    case "segunda":
-        print("hoje e segunda-feira.")
-    case "terca":
-        print("hoje e terca-feira")
-    case "quarta": 
-        print("hoje e quarta-feira.")
-    case "quinta":
-        print("hoje e quinta-feira")
-    case "sexta":
-        print ("hoje e sexta-feira")
-    case "sabado" | "domingo":
-        print("hoje e fim de samana!")
-    case _:
-        print("dia invalido.")
+pares = 0 
+impares = 0 
+soma_geral = 0 
+soma_pares = 0 
+contador_geral = 0 
 
-print(dia)
+while True:
+    numero = int(input("Digite um numero: "))
+    if numero > 0: 
+        contator_geral  += 1 
+        soma_geral += numero 
+        if numero % 2 == 0: 
+            pares += 1 
+            soma_pares += 1 
+        else:
+            impares += 1 
+    if numero == 0: 
+        break 
 
-print("=== FIM ===")
+media_pares = soma_pares / pares 
+media_geral = soma_geral / contador_geral 
+
+print(f"\nQuantidade de pares: {pares}")
+print(f"Quantidades de impares: {impares}")
+print(f"media de numeros pares: {media_pares}")
+print(f"media geral: {media_geral}")
